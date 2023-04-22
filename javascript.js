@@ -66,4 +66,5 @@ navLinks.forEach(function(link) {
 
 $("#enviar").click(function(){
   alert("Gracias por contactarse conmigo, me pondré en contacto con usted en la brevedad posible")
+  return
 })
