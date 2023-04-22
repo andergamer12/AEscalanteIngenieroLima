@@ -68,6 +68,7 @@ footer p{
 }
 @media (min-width: 900px){
     .grid-container{
+
         grid-template:
             "navbar main sidebar" auto
             "footer footer footer" 50px/
