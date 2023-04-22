@@ -17,14 +17,14 @@
           let xmen = document.frm1.txtmen.value;
 
           if(xnom.length=='0'){
-              alert("Ingresa Nombres Completos!!!");
+              alert("Ingresa Nombres Completos");
               //document.frm1.txtnom.focus();
               return;
           }
 
           let errornom=/[A-Za-zÑñ\s]/;
           if(!errornom.test(xnom)){
-              alert("Solo letras grrr!!!");
+              alert("Solo letras");
               //document.frm1.txtnom.focus();
               return;
           }
@@ -34,32 +34,32 @@
     }
           expr = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;			
       if (!expr.test(xemail)){
-        alert("Error: La dirección de correo es incorrecta.");
+        alert("La dirección de correo es incorrecta.");
         return;
     }
           if(xnum.length=='0' || xnum.length<9){
-              alert("Ingresa tu numero!!!");
+              alert("Ingresa un número de 9 digitos");
               //document.frm1.txtdni.focus();
               return;
           }            
           let errornum=/\d{9}/;
           if(!errornum.test(xnum)){
-              alert("Solo números grrr!!!");
+              alert("Solo números");
               return;
           }
 
     if(xasu.length=='0'){
-              alert("Ingresa el asunto!!!");
+              alert("Ingresa el asunto");
               //document.frm1.txtnom.focus();
               return;
           }
           if(xmen.length=='0'){
-              alert("Ingresa el mensaje!!!");
+              alert("Ingresa el mensaje");
               //document.frm1.txtnom.focus();
               return;
           }            	
           document.frm1.action="https://andergamer12.github.io/AEscalanteIngenieroLima/";
-          document.frm1.method=alert("Gracias por mandar la solicitud, me contactaré con usted lo más pronto posible");
+          document.frm1.method=alert("Gracias por mandar la solicitud, me contactaré con usted lo más pronto posible.");
           document.frm1.submit();
       }
   </script>
