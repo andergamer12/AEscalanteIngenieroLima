@@ -55,22 +55,19 @@ footer p{
         "footer" 100px
 }
 
-@media screen and (max-width: 600px){
 
-}
 
 @media (min-width: 600px){
     .grid-container{
-        background-color: blue;
         grid-template:
             "navbar navbar" 50px
             "footer footer" 50px/
-            200px auto;
+             auto;
+             margin-right: 50px;
     }
 }
 @media (min-width: 900px){
     .grid-container{
-        background-color: rgb(156, 236, 80);
         grid-template:
             "navbar main sidebar" auto
             "footer footer footer" 50px/
