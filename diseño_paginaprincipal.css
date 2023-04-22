@@ -264,6 +264,7 @@ section .perfil{
 #enviar p {
     font-size: 20px;
 }
+
 /* Importación de fuentes de google fonts */ 
 @import url(https://fonts.googleapis.com/css?family=Noto+Sans);
 *{
