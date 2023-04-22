@@ -26,6 +26,7 @@ $("#3").click(function(){
     $("#experiencia_1").fadeOut(0);
     $("#habilidades_1").fadeOut(0);
     $("#contactos_1").fadeOut(0);
+    $("#direccion_1").fadeOut(0);
     $("#educacion_1").fadeIn(1000);
 })
 $("#4").click(function(){

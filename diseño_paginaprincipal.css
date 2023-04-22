@@ -15,6 +15,7 @@ body{
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1.2rem;
     min-height: 100%;
+    padding-bottom: 0px;
 }
 
 .grid-container>*{
@@ -74,6 +75,13 @@ footer p{
             "footer footer footer" 50px/
             200px auto 200px;
     }
+}
+
+@media (min-width: 1920px) {
+  .navbar {
+    height: 65px;
+    font-size: 30px;
+  }
 }
 
 .datos{
