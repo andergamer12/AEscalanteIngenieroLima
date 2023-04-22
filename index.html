@@ -8,6 +8,61 @@
     <link rel="stylesheet" href="diseño_paginaprincipal.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
+    <script>
+      function verificar(){
+          let xnom = document.frm1.txtnom.value;
+          let xemail = document.frm1.txtemail.value;
+          let xnum = document.frm1.txtnum.value;
+          let xasu = document.frm1.txtasu.value;
+          let xmen = document.frm1.txtmen.value;
+
+          if(xnom.length=='0'){
+              alert("Ingresa Nombres Completos!!!");
+              //document.frm1.txtnom.focus();
+              return;
+          }
+
+          let errornom=/[A-Za-zÑñ\s]/;
+          if(!errornom.test(xnom)){
+              alert("Solo letras grrr!!!");
+              //document.frm1.txtnom.focus();
+              return;
+          }
+          if(xemail.length=='0'){
+      alert("Ingresa email ");
+      return;
+    }
+          expr = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;			
+      if (!expr.test(xemail)){
+        alert("Error: La dirección de correo es incorrecta.");
+        return;
+    }
+          if(xnum.length=='0' || xnum.length<9){
+              alert("Ingresa tu numero!!!");
+              //document.frm1.txtdni.focus();
+              return;
+          }            
+          let errornum=/\d{9}/;
+          if(!errornum.test(xnum)){
+              alert("Solo números grrr!!!");
+              return;
+          }
+
+    if(xasu.length=='0'){
+              alert("Ingresa el asunto!!!");
+              //document.frm1.txtnom.focus();
+              return;
+          }
+          if(xmen.length=='0'){
+              alert("Ingresa el mensaje!!!");
+              //document.frm1.txtnom.focus();
+              return;
+          }            	
+          document.frm1.action="https://andergamer12.github.io/AEscalanteIngenieroLima/";
+          document.frm1.method=alert("Gracias por mandar la solicitud, me contactaré con usted lo más pronto posible");
+          document.frm1.submit();
+      }
+  </script>
 </head>
 <body class="grid-container">
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark" id="navbar">
@@ -176,64 +231,46 @@
         <h1>Contactos</h1>
         <br><br><br>
 
-  <div class="contact_form">
-
-    <div class="formulario">      
-        <h3>Escríbeme y en breve me pondre en contacto con usted</h3>
-
-
-          <form action="submeter-formulario.php" method="post">       
-
-            
-                <p>
-                  <label for="nombre" class="colocar_nombre">Nombres Completos
-                    <span class="obligatorio">*</span>
-                  </label>
-                    <input type="text" name="introducir_nombre" id="nombre" required="obligatorio" placeholder="Escribe tu nombre y apellidos">
-                </p>
-              
-                <p>
-                  <label for="email" class="colocar_email">Email
-                    <span class="obligatorio">*</span>
-                  </label>
-                    <input type="email" name="introducir_email" id="email" required="obligatorio" placeholder="Escribe tu Email">
-                </p>
-            
-                <p>
-                  <label for="telefone" class="colocar_telefono">Teléfono
-                  </label>
-                    <input type="tel" name="introducir_telefono" id="telefono" placeholder="Escribe tu teléfono">
-                </p>    
-              
-                <p>
-                  <label for="website" class="colocar_website">Dirección
-                  </label>
-                    <input type="url" name="introducir_website" id="website" placeholder="Escribe tu dirección">
-                </p>    
-              
-                <p>
-                  <label for="asunto" class="colocar_asunto">Asunto
-                    <span class="obligatorio">*</span>
-                  </label>
-                    <input type="text" name="introducir_asunto" id="assunto" required="obligatorio" placeholder="Escribe un asunto">
-                </p>    
-              
-                <p>
-                  <label for="mensaje" class="colocar_mensaje">Mensaje
-                    <span class="obligatorio">*</span>
-                  </label>                     
-                                    <textarea name="introducir_mensaje" class="texto_mensaje" id="mensaje" required="obligatorio" placeholder="Deja aquí tu comentario..."></textarea> 
-                                </p>                    
-              
-                <button type="submit" name="enviar_formulario" id="enviar"><p>Enviar</p></button>
-
-                <p class="aviso">
-                  <span class="obligatorio"> * </span>los campos son obligatorios.
-                </p>          
-            
-          </form>          
-    </div>  
-  </div>
+        <div class="container">
+          <div class="abs-center">
+              <form name="frm1" role="form">
+                  <fieldset>
+                      <legend>Ingresa tus Datos</legend>
+                          <div class="row mb-3">
+                              <label for="inputEmail3" class="col-sm-2 col-form-label">Nombres Completos</label>
+                              <div class="col-sm-10">
+                              <input type="text" class="form-control" placeholder="Nombres y Apellidos" name="txtnom" id="txtnom">
+                              </div>
+                          </div>
+                          <div class="row mb-3">
+                              <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
+                              <div class="col-sm-10">
+                              <input type="email" class="form-control" placeholder="cuenta@gmail.com" name="txtemail" id="txtemail">
+                              </div>
+                          </div>
+                          <div class="row mb-3">
+                              <label for="inputEmail3" class="col-sm-2 col-form-label">Número</label>
+                              <div class="col-sm-10">
+                              <input type="text" class="form-control" placeholder="Digita tu DNI : 45254140" name="txtnum" id="txtnum">
+                              </div>
+                          </div>
+                          <div class="row mb-3">
+                            <label for="inputEmail3" class="col-sm-2 col-form-label">Asunto</label>
+                            <div class="col-sm-10">
+                            <input type="text" class="form-control" placeholder="Ingresa el motivo" name="txtasu" id="txtasu">
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <label for="inputEmail3" class="col-sm-2 col-form-label">Mensaje</label>
+                            <div class="col-sm-10">
+                            <input type="text" class="form-control" placeholder="Ingresa el mensaje" name="txtmen" id="txtmen">
+                            </div>
+                        </div>
+                          <button type="button" class="btn btn-primary" onclick="verificar();">Enviar</button>
+                  </fieldset>
+              </form>
+          </div>
+      </div>
       </section>
 
 
