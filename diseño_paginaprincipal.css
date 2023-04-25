@@ -16,6 +16,7 @@ body{
     font-size: 1.2rem;
     min-height: 100%;
     padding-bottom: 0px;
+    
 }
 
 .grid-container>*{
@@ -44,6 +45,7 @@ footer p{
     font-size: 26px;
     padding: 0 8px;
     color: white;
+    position: absolute;
 }
 
 /*Medias Queries*/
@@ -275,13 +277,3 @@ section .perfil{
 #enviar p {
     font-size: 20px;
 }
-
-/* Importación de fuentes de google fonts */ 
-@import url(https://fonts.googleapis.com/css?family=Noto+Sans);
-*{
-    box-shadow: border-box;
-    margin: 0;
-    padding: 0;
-
-}
-
